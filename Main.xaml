@@ -155,7 +155,7 @@
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Dev_BRKS" />
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Dev_BRKS_Login" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,1140" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
@@ -163,12 +163,12 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B6&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS_Login.Sheet(&quot;Sheet1&quot;).Cell(&quot;B6&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.userXDRC]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
                     </ueab:ReadCellValueX>
-                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B7&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS_Login.Sheet(&quot;Sheet1&quot;).Cell(&quot;B7&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.temp_pass]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
@@ -181,12 +181,12 @@
                         <InArgument x:TypeArguments="ss:SecureString">[New System.Net.NetworkCredential("",temp_pass).securepassword]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS_Login.Sheet(&quot;Sheet1&quot;).Cell(&quot;B2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[userVPN]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
                     </ueab:ReadCellValueX>
-                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B3&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS_Login.Sheet(&quot;Sheet1&quot;).Cell(&quot;B3&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[temp_pass_vpn]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
