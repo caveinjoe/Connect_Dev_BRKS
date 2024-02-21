@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>734,7619.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>734,7622.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -127,7 +127,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="744,7554.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="744,7558" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="userVPN" />
       <Variable x:TypeArguments="ss:SecureString" Name="passVPN" />
@@ -155,7 +155,7 @@
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Dev_BRKS_Login" />
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Dev_BRKS" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,1140" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
@@ -163,12 +163,12 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ReadCellValueX Cell="[Dev_BRKS_Login.Sheet(&quot;Sheet1&quot;).Cell(&quot;B6&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B6&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.userXDRC]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
                     </ueab:ReadCellValueX>
-                    <ueab:ReadCellValueX Cell="[Dev_BRKS_Login.Sheet(&quot;Sheet1&quot;).Cell(&quot;B7&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B7&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.temp_pass]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
@@ -181,12 +181,12 @@
                         <InArgument x:TypeArguments="ss:SecureString">[New System.Net.NetworkCredential("",temp_pass).securepassword]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ueab:ReadCellValueX Cell="[Dev_BRKS_Login.Sheet(&quot;Sheet1&quot;).Cell(&quot;B2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[userVPN]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
                     </ueab:ReadCellValueX>
-                    <ueab:ReadCellValueX Cell="[Dev_BRKS_Login.Sheet(&quot;Sheet1&quot;).Cell(&quot;B3&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B3&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[temp_pass_vpn]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
@@ -207,13 +207,13 @@
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: GlobalProtect" sap:VirtualizedContainerService.HintSize="682,2783.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Always" ScopeGuid="a927edfe-05df-40cf-af1b-e4bee00a9333" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: GlobalProtect" sap:VirtualizedContainerService.HintSize="682,2786.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Always" ScopeGuid="a927edfe-05df-40cf-af1b-e4bee00a9333" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648,2486" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648,2489.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -230,9 +230,9 @@
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
-            <If Condition="[vpnStat &lt;&gt; &quot;Connected&quot;]" sap:VirtualizedContainerService.HintSize="586,2170.6666666666665" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[vpnStat &lt;&gt; &quot;Connected&quot;]" sap:VirtualizedContainerService.HintSize="586,2174" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="552,1986.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <Sequence sap:VirtualizedContainerService.HintSize="552,1990" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -249,7 +249,7 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,220" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" Text="[userVPN]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" Text="[userVPN]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable CvElementArea="67, 359, 325, 42" CvType="InputBox" DesignTimeRectangle="69, 366, 321, 30" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' idx='2' /&gt;&lt;wnd ctrlid='1166' /&gt;&lt;ctrl name='Password' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1166' /&gt;&lt;ctrl name='Password' role='editable text' automationid='' /&gt;" Guid="f6534f19-7c95-46c9-be7f-8c2a24e99c0f" InformativeScreenshot="e345e417ec81b9a88cc34b5ea6c9c89c.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='pangpa.exe' cls='#32770' title='GlobalProtect' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -271,7 +271,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Connect'" sap:VirtualizedContainerService.HintSize="510,158.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Connect'" sap:VirtualizedContainerService.HintSize="510,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable CvElementArea="67, 506, 327, 54" CvTextArea="191, 522, 76, 21" CvTextArgument="Connect" CvType="Button" DesignTimeRectangle="66, 508, 327, 49" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' idx='2' /&gt;&lt;wnd ctrlid='1168' title='Connect' /&gt;&lt;ctrl name='Connect' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1168' title='Connect' /&gt;&lt;ctrl name='Connect' role='push button' automationid='' check:text='Connect' /&gt;" Guid="6fc644d5-1086-4fdf-b895-bd6fa76d64dc" InformativeScreenshot="796287e75d2d3630ad356f4376615d70.png" ScopeSelectorArgument="&lt;wnd app='pangpa.exe' cls='#32770' title='GlobalProtect' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
