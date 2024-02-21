@@ -1,0 +1,528 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>734,7619.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="744,7554.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="userVPN" />
+      <Variable x:TypeArguments="ss:SecureString" Name="passVPN" />
+      <Variable x:TypeArguments="x:String" Name="temp_pass_vpn" />
+      <Variable x:TypeArguments="x:String" Name="vpnStat" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="682,1618.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,1531.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="540,1420.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" KeepExcelFileOpen="True" ResizeWindow="None" WorkbookPath="D:\BRKS\Login BRKS.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Dev_BRKS" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,1140" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B6&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.userXDRC]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                    </ueab:ReadCellValueX>
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B7&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.temp_pass]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                    </ueab:ReadCellValueX>
+                    <Assign sap:VirtualizedContainerService.HintSize="444,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="ss:SecureString">[GlobalVariablesNamespace.GlobalVariables.passXDRC]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="ss:SecureString">[New System.Net.NetworkCredential("",temp_pass).securepassword]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:String">[userVPN]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                    </ueab:ReadCellValueX>
+                    <ueab:ReadCellValueX Cell="[Dev_BRKS.Sheet(&quot;Sheet1&quot;).Cell(&quot;B3&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:String">[temp_pass_vpn]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                    </ueab:ReadCellValueX>
+                    <Assign sap:VirtualizedContainerService.HintSize="444,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="ss:SecureString">[passVPN]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="ss:SecureString">[New System.Net.NetworkCredential("",temp_pass_vpn).securepassword]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: GlobalProtect" sap:VirtualizedContainerService.HintSize="682,2783.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Always" ScopeGuid="a927edfe-05df-40cf-af1b-e4bee00a9333" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648,2486" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'Disconnected'" sap:VirtualizedContainerService.HintSize="586,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" TextString="[vpnStat]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="30, 283, 395, 46" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1165' title='Disconnected' /&gt;&lt;ctrl name='Disconnected' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1165' title='Disconnected' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="726c9dca-3829-4270-87bd-ce2c0ce1f3f5" InformativeScreenshot="1953e8a184ce2381475303bcf7b1139a.png" ScopeSelectorArgument="&lt;wnd app='pangpa.exe' cls='#32770' title='GlobalProtect' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="8, 22, 390, 36" ElementType="Icon" FullSelectorArgument="&lt;wnd ctrlid='1304' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1304' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <If Condition="[vpnStat &lt;&gt; &quot;Connected&quot;]" sap:VirtualizedContainerService.HintSize="586,2170.6666666666665" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="552,1986.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Connect'" sap:VirtualizedContainerService.HintSize="510,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvElementArea="66, 523, 328, 53" CvTextArea="191, 538, 76, 21" CvTextArgument="Connect" CvType="Button" DesignTimeRectangle="66, 528, 327, 50" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1160' title='Connect' /&gt;&lt;ctrl name='Connect' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1160' title='Connect' /&gt;&lt;ctrl name='Connect' role='push button' automationid='' check:text='Connect' /&gt;" Guid="80cdd879-7179-47d8-a7a4-f73c9bab5794" InformativeScreenshot="117b29cc032714b9039ddedbbe22bd2c.png" ScopeSelectorArgument="&lt;wnd app='pangpa.exe' cls='#32770' title='GlobalProtect' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="71, 436, 52, 19" CvTextArgument="Portal" CvType="Text" DesignTimeRectangle="70, 437, 205, 20" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1314' title='Portal' /&gt;&lt;ctrl name='Portal' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1314' title='Portal' /&gt;&lt;ctrl name='Portal' role='text' automationid='' check:text='Portal' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,220" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" Text="[userVPN]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CvElementArea="67, 359, 325, 42" CvType="InputBox" DesignTimeRectangle="69, 366, 321, 30" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' idx='2' /&gt;&lt;wnd ctrlid='1166' /&gt;&lt;ctrl name='Password' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1166' /&gt;&lt;ctrl name='Password' role='editable text' automationid='' /&gt;" Guid="f6534f19-7c95-46c9-be7f-8c2a24e99c0f" InformativeScreenshot="e345e417ec81b9a88cc34b5ea6c9c89c.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='pangpa.exe' cls='#32770' title='GlobalProtect' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="65, 327, 91, 19" CvTextArgument="Username" CvType="Text" DesignTimeRectangle="66, 324, 268, 24" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' idx='2' /&gt;&lt;wnd ctrlid='1312' title='Username' /&gt;&lt;ctrl name='Username' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1312' title='Username' /&gt;&lt;ctrl name='Username' role='text' automationid='' check:text='Username' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_4" IsPassword="True" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" SecureText="[passVPN]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CvElementArea="67, 439, 327, 46" CvType="InputBox" DesignTimeRectangle="69, 447, 321, 30" DesignTimeScaleFactor="1.5" ElementType="InputBoxPassword" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' idx='2' /&gt;&lt;wnd ctrlid='1167' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1167' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="ae973446-0b5b-4928-850f-1d248ed7f77d" InformativeScreenshot="8d51437acc4eb069fd8c36ced642bcd0.png" ScopeSelectorArgument="&lt;wnd app='pangpa.exe' cls='#32770' title='GlobalProtect' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="65, 408, 88, 21" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="66, 407, 268, 26" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' idx='2' /&gt;&lt;wnd ctrlid='1313' title='Password' /&gt;&lt;ctrl name='Password' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1313' title='Password' /&gt;&lt;ctrl name='Password' role='text' automationid='' check:text='Password' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Connect'" sap:VirtualizedContainerService.HintSize="510,158.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvElementArea="67, 506, 327, 54" CvTextArea="191, 522, 76, 21" CvTextArgument="Connect" CvType="Button" DesignTimeRectangle="66, 508, 327, 49" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' idx='2' /&gt;&lt;wnd ctrlid='1168' title='Connect' /&gt;&lt;ctrl name='Connect' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1168' title='Connect' /&gt;&lt;ctrl name='Connect' role='push button' automationid='' check:text='Connect' /&gt;" Guid="6fc644d5-1086-4fdf-b895-bd6fa76d64dc" InformativeScreenshot="796287e75d2d3630ad356f4376615d70.png" ScopeSelectorArgument="&lt;wnd app='pangpa.exe' cls='#32770' title='GlobalProtect' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="193, 588, 61, 21" CvTextArgument="Cancel" CvType="Text" DesignTimeRectangle="192, 583, 68, 33" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1252' title='Cancel' /&gt;&lt;ctrl name='Cancel' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1252' title='Cancel' /&gt;&lt;ctrl name='Cancel' role='push button' automationid='' check:text='Cancel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[vpnStat &lt;&gt; &quot;Connected&quot;]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="510,978.6666666666666" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                    <ui:InterruptibleDoWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,840.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Int32" Default="0" Name="vpnRetry" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[vpnRetry]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[vpnRetry + 1]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                        <uix:NGetText DisplayName="Get Text 'Connected'" sap:VirtualizedContainerService.HintSize="434,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a927edfe-05df-40cf-af1b-e4bee00a9333" TextString="[vpnStat]" Version="V3">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable CvTextArea="121, 288, 211, 31" CvType="AnyWordGroup" DesignTimeRectangle="30, 282, 395, 47" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1165' title='Connected' /&gt;&lt;ctrl name='Connected' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Version' cls='#32770' /&gt;&lt;wnd ctrlid='1165' title='Connected' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="5d241fd6-667d-4f55-b10b-f0b91f0a0ad8" InformativeScreenshot="98585ed5c5976617f4da508699c1a75e.png" ScopeSelectorArgument="&lt;wnd app='pangpa.exe' cls='#32770' title='GlobalProtect' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvTextArea="63, 25, 260, 22" CvTextArgument="paloalto GlobalProtect" CvType="Text" DesignTimeRectangle="8, 17, 390, 36" ElementType="Icon" FullSelectorArgument="&lt;wnd ctrlid='1304' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1304' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                        <If Condition="[vpnRetry &gt;= 15]" sap:VirtualizedContainerService.HintSize="434,296.6666666666667" sap2010:WorkflowViewState.IdRef="If_5">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,112.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:Break sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Break_2" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_23" />
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ui:InterruptibleDoWhile.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InterruptibleDoWhile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="300,80.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1466, 365, 455, 644" FilePath="C:\Program Files\Palo Alto Networks\GlobalProtect\pangpa.exe" IconBase64="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" InformativeScreenshot="93703cdb476df69698ba5c76e28bceaa.png" Selector="&lt;wnd app='pangpa.exe' cls='#32770' title='GlobalProtect' /&gt;" Title="GlobalProtect" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <If Condition="[vpnStat = &quot;Connected&quot;]" sap:VirtualizedContainerService.HintSize="682,2962" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="588,2778" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: IBM i Access Client Solutions" sap:VirtualizedContainerService.HintSize="546,2690.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="3abbb871-6ea4-43b6-b3af-d70eedada293" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence sap:VirtualizedContainerService.HintSize="512,2393.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '5250 Session Manager'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3abbb871-6ea4-43b6-b3af-d70eedada293" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvTextArea="98, 738, 165, 20" CvTextArgument="5250 Session Manager" CvType="Text" DesignTimeRectangle="79, 738, 190, 25" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;java cls='GrTree' idx='2' role='tree' /&gt;&lt;java name='  Management' role='label' /&gt;&lt;java name='5250 Session Manager' role='label' /&gt;" FuzzySelectorArgument="&lt;java cls='GrTree' role='tree' /&gt;&lt;java name='  Management' role='label' /&gt;&lt;java name='5250 Session Manager' role='label' check:text='5250 Session Manager' /&gt;" Guid="70bc2295-a1fe-4eaf-ba7c-8376b40d5674" InformativeScreenshot="168a57be3372654ae0c5512efc07d4c5.png" ScopeSelectorArgument="&lt;wnd app='acslaunch_win-32.exe' cls='SunAwtFrame' title='IBM i Access Client Solutions' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="61, 690, 96, 21" CvTextArgument="Management" CvType="Text" DesignTimeRectangle="57, 690, 106, 24" ElementType="Text" FullSelectorArgument="&lt;java cls='GrTree' idx='2' role='tree' /&gt;&lt;java name='  Management' role='label' /&gt;" FuzzySelectorArgument="&lt;java cls='GrTree' role='tree' /&gt;&lt;java name='  Management' role='label' check:text='Management' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'brks'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3abbb871-6ea4-43b6-b3af-d70eedada293" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvTextArea="83, 228, 34, 18" CvTextArgument="brks" CvType="Text" DesignTimeRectangle="40, 122, 127, 126" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;java name='Configured Sessions' role='list' /&gt;&lt;java name='brks' role='label' /&gt;" FuzzySelectorArgument="&lt;java name='Configured Sessions' role='list' /&gt;&lt;java name='brks' role='label' check:text='brks' /&gt;" Guid="0fc762a4-a724-4bce-b207-728ced945f4e" InformativeScreenshot="7bd2eb7d767e17d4e8b5429121dcd6db.png" ScopeSelectorArgument="&lt;wnd app='acslaunch_win-32.exe' cls='SunAwtFrame' title='IBM i Access Client Solutions - Session Manager' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="236, 87, 148, 21" CvTextArgument="Configured Sessions" CvType="Text" DesignTimeRectangle="240, 86, 145, 24" ElementType="Text" FullSelectorArgument="&lt;java name='Configured Sessions' role='label' /&gt;" FuzzySelectorArgument="&lt;java name='Configured Sessions' role='label' check:text='Configured Sessions' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,800.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="3abbb871-6ea4-43b6-b3af-d70eedada293" Text="[GlobalVariablesNamespace.GlobalVariables.userXDRC]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="239, 129, 215, 32" CvType="InputBox" DesignTimeRectangle="242, 130, 211, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;java name='Signon information' role='panel' /&gt;&lt;java name='User:' role='text' /&gt;" FuzzySelectorArgument="&lt;java name='Signon information' role='panel' /&gt;&lt;java name='User:' role='text' /&gt;" Guid="6dc2dfe3-765b-44bb-baa6-964696fa08ec" InformativeScreenshot="8c063fb560d54b8d6c5634dd4e4171fd.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='acslaunch_win-32.exe' cls='SunAwtDialog' title='Signon to IBM i 172.100.220.2' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="155, 136, 40, 16" CvTextArgument="User:" CvType="Text" DesignTimeRectangle="159, 135, 39, 21" ElementType="Text" FullSelectorArgument="&lt;java name='Signon information' role='panel' /&gt;&lt;java name='User:' role='label' /&gt;" FuzzySelectorArgument="&lt;java name='Signon information' role='panel' /&gt;&lt;java name='User:' role='label' check:text='User:' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="3abbb871-6ea4-43b6-b3af-d70eedada293" SecureText="[GlobalVariablesNamespace.GlobalVariables.passXDRC]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable CvElementArea="239, 173, 216, 33" CvType="InputBox" DesignTimeRectangle="242, 175, 211, 30" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;java name='Signon information' role='panel' /&gt;&lt;java name='Password:' role='password text' /&gt;" FuzzySelectorArgument="&lt;java name='Signon information' role='panel' /&gt;&lt;java name='Password:' role='password text' /&gt;" Guid="2fd7e915-b1c2-4505-a6dd-1c743e44c433" InformativeScreenshot="b1861fa6729277e9df422a0908540428.png" ScopeSelectorArgument="&lt;wnd app='acslaunch_win-32.exe' cls='SunAwtDialog' title='Signon to IBM i 172.100.220.2' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="155, 180, 76, 18" CvTextArgument="Password:" CvType="Text" DesignTimeRectangle="159, 179, 75, 21" ElementType="Text" FullSelectorArgument="&lt;java name='Signon information' role='panel' /&gt;&lt;java name='Password:' role='label' /&gt;" FuzzySelectorArgument="&lt;java name='Signon information' role='panel' /&gt;&lt;java name='Password:' role='label' check:text='Password:' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3abbb871-6ea4-43b6-b3af-d70eedada293" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="264, 267, 70, 33" CvTextArea="286, 273, 24, 18" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="264, 266, 71, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;java name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='OK' role='push button' check:text='OK' /&gt;" Guid="e1307929-1fc8-4ed4-b489-a3a65de5325f" InformativeScreenshot="27cc893be6d942f415beef26d32b2a9c.png" ScopeSelectorArgument="&lt;wnd app='acslaunch_win-32.exe' cls='SunAwtDialog' title='Signon to IBM i 172.100.220.2' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvElementArea="357, 266, 97, 35" CvTextArea="379, 273, 51, 18" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="358, 266, 99, 34" ElementType="Button" FullSelectorArgument="&lt;java name='Cancel' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='Cancel' role='push button' check:text='Cancel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,806" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Play Macro...'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3abbb871-6ea4-43b6-b3af-d70eedada293" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="591, 79, 31, 34" CvType="Icon" DesignTimeRectangle="591, 76, 35, 35" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;java name='Play Macro...' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='Play Macro...' role='push button' check:text='Play Macro...' /&gt;" Guid="617bc5f7-8a31-4a18-820f-fbf5e697bc81" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAYAAACMo1E1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAP0SURBVFhH7dddTFpnHMdxLraLJbvYzZIuu+uW7GK7WNKLXfRqqWvslq3SzYYtm6mTblh8Q2DginqAKhbEudoIdtgy6EBl0i0UdY2vbROrhdJu09ToZDMqIPgSE69/e3hsm7o9JzkSyUjmxSeQ55znn284cABRPB5HrhKNjY0hV4mmp6eRq0SxWAy5SrS1tYVcJdrc3ESuEm1sbCBX7cdlaj8uU/+PuIn5efRNTVFz5AbKOme39izu3PAwPrh6lUoHJtfWqLX1deb5QuxZXHFvLw5YLNRnPh+4wUFqkryirPOF2LM4sccDEcdRB1tbcchmo86PjmZ8ubMS97RDdjveJ5c6LR24Si41az9L1uNeMJl2XO4fwmGsM/azZD3uafkuF+zj47kT94zBgGeNRqoiEMDgw4fM/SxZj3vX7UZVMEgFyXvuz0SCuZ8lK3GvXbiAww4H9e3t2xiamaGi5E8Lay8fQXFr5BO2urqKZDL5LyuPHHe5Iaqto2R+PzrJeyvtfjSKZCpF96/v8oYsKC4SiaDH3wvjN5Yd9CYLOOO21z+VQpRfQL0jq4JMy1FazoSL7Q4MDQ0hSkJZ8/kIinN7PdDotSivle0gV8lQWrUt/9THeEsipiSyU0/W0yq/qoLOwGHi7iRzPh9BcQqdFidKjqPDq8ElrxZ2jwYXXSq0OzWwObX/oEGbQ009XlNzUrz59mFcCwaY8/kIiisql0H8+TGEfrMhTPT8rEexvBBdfj1CD2zUBNVOnrehofkMzlnkCN3fPtZ6SYEX33gFnl4fcz4fQXEnvywmcUexuOzCyC0r7A4dKlSVsJHHkZtWLMXcWCAiU+348ac6GJtUMJjU5LkBv/5uh8OjxnMHX4Krx8ucz2cXcXlYXr4MY+MXKFOcgbfnGsqr5TA0nCbrV0jgFQT6DRCfPAqztRnmFisKCo/hep8Blz3K7MadKMnDyooDni4NdFwZKpQ61BvK4O3WkH/nnVgmxifMaLKUQHNWCXWNCkaTFHfImrNLkd24D6VHkEp9h8m7ZnzvroFCXQq3R4tQ6DwSCQc1O9uG4REOlhYFmpoVGLjBYXaujURlMU5SWoKPTuchnrAjFu/AvYgFnc5KRB6YyVoHedW2pY8lVjrQ/0stgv06smanx53dlXj+1Zfh9nUx5/MRFFfbaIREKobBWkR93fgJ5BoxzpLHx2tPtBRBWV+I6rpC6B+tlddIcKTgPQRvDDDn8xEU101uAfWNdaiuL82I1qhEg7kJoXth5nw+guJmyJf26K2b8Ph9GQkM9CFMfmQuLi4y5/MRFJcgP3P+WljAzNxsRv6IzmNpaYl8oFLM+XwExf1X9uMys4G/ASAX9maOHLXrAAAAAElFTkSuQmCC" InformativeScreenshot="d69f0d96540cbce0535fe2e1f9420ea7.png" ScopeSelectorArgument="&lt;wnd app='acslaunch_win-32.exe' cls='SunAwtFrame' title='A - 5250 Display' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="16, 51, 30, 18" CvTextArgument="File" CvType="Text" DesignTimeRectangle="15, 41, 40, 29" FullSelectorArgument="&lt;java name='File' role='menu' /&gt;" FuzzySelectorArgument="&lt;java name='File' role='menu' check:text='File' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NSelectItem DisplayName="Select Item 'Macro List'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="LOGIN BRKS" ScopeIdentifier="3abbb871-6ea4-43b6-b3af-d70eedada293" Version="V3">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="2">
+                          <x:String>AAAA</x:String>
+                          <x:String>LOGIN BRKS</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="23, 291, 686, 170" DesignTimeScaleFactor="1" ElementType="List" FullSelectorArgument="&lt;java name='Macro List:' role='list' /&gt;" FuzzySelectorArgument="&lt;java name='Macro List:' role='list' /&gt;" Guid="d4d94d1a-b01b-4930-bb54-05a11e0ec755" InformativeScreenshot="6a8b7bb1bf58572b738d07b52522b8c8.png" ScopeSelectorArgument="&lt;wnd app='acslaunch_win-32.exe' cls='SunAwtDialog' title='Play macro' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="22, 259, 79, 16" CvTextArgument="Macro List:" CvType="Text" DesignTimeRectangle="21, 257, 689, 21" ElementType="Text" FullSelectorArgument="&lt;java name='Macro List:' role='label' /&gt;" FuzzySelectorArgument="&lt;java name='Macro List:' role='label' check:text='Macro List:' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NSelectItem.Target>
+                    </uix:NSelectItem>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3abbb871-6ea4-43b6-b3af-d70eedada293" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="234, 550, 70, 34" CvTextArea="256, 558, 24, 16" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="235, 550, 70, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;java name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='OK' role='push button' check:text='OK' /&gt;" Guid="563e7ddb-29d9-4a5a-b1e2-9fb5b024502c" InformativeScreenshot="fcb85ccf03e907f13602608e9be38d6a.png" ScopeSelectorArgument="&lt;wnd app='acslaunch_win-32.exe' cls='SunAwtDialog' title='Play macro' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvElementArea="312, 550, 97, 34" CvTextArea="334, 558, 51, 16" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="313, 550, 97, 34" ElementType="Button" FullSelectorArgument="&lt;java name='Cancel' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='Cancel' role='push button' check:text='Cancel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="1029, 159, 900, 897" FilePath="C:\Users\kevin.jonathan\IBM\ClientSolutions\Start_Programs\Windows_i386-32\acslaunch_win-32.exe" IconBase64="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" InformativeScreenshot="de7d30263bf0a44bfbf5af587ea158fd.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='acslaunch_win-32.exe' cls='SunAwtFrame' title='IBM i Access Client Solutions' /&gt;" Title="IBM i Access Client Solutions - Session Manager" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="300,80.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
